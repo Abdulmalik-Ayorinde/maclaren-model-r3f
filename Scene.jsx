@@ -46,7 +46,7 @@ export function Model(props) {
 				<mesh
 					geometry={nodes.Object_2.geometry}
 					material={materials.F1_front_plastic}>
-					<meshStandardMaterial color={"red"} />
+					{/* <meshStandardMaterial color={"red"} /> */}
 				</mesh>
 				<mesh
 					geometry={nodes.Object_3.geometry}
@@ -62,12 +62,12 @@ export function Model(props) {
 					material={materials.F1_red_R}
 				/>
 				<mesh geometry={nodes.Object_6.geometry} material={materials.F1_side}>
-					<meshStandardMaterial color={"blue"} />
+					{/* <meshStandardMaterial color={"blue"} /> */}
 				</mesh>
 				<mesh
 					geometry={nodes.Object_7.geometry}
 					material={materials.McLAREN_RED_LINE}>
-					<meshStandardMaterial color={"green"} />
+					<meshStandardMaterial color={"white"} />
 				</mesh>
 				<mesh
 					geometry={nodes.Object_8.geometry}
@@ -78,8 +78,9 @@ export function Model(props) {
 				/>
 				<mesh
 					geometry={nodes.Object_10.geometry}
-					material={materials.McLaren_F1_1993_By_Alex_Ka}
-				/>
+					material={materials.McLaren_F1_1993_By_Alex_Ka}>
+					<meshStandardMaterial color={"#13c1e8"} />
+				</mesh>
 				<mesh
 					geometry={nodes.Object_11.geometry}
 					material={materials.McLaren_logo}
@@ -110,13 +111,13 @@ export function Model(props) {
 				<mesh
 					geometry={nodes.Object_18.geometry}
 					material={materials.black_plastic}>
-					<meshStandardMaterial color={"green"} />
+					{/* <meshStandardMaterial color={"white"} /> */}
 				</mesh>
 				<mesh geometry={nodes.Object_19.geometry} material={materials.bottom} />
 				<mesh
 					geometry={nodes.Object_20.geometry}
 					material={materials.brakedisk}>
-					<meshStandardMaterial color={"black"} />
+					{/* <meshStandardMaterial color={"black"} /> */}
 				</mesh>
 				<mesh
 					geometry={nodes.Object_21.geometry}
