@@ -79,7 +79,7 @@ export function Model(props) {
 				<mesh
 					geometry={nodes.Object_10.geometry}
 					material={materials.McLaren_F1_1993_By_Alex_Ka}>
-					<meshStandardMaterial color={"#13c1e8"} />
+					<meshStandardMaterial color={props.color} />
 				</mesh>
 				<mesh
 					geometry={nodes.Object_11.geometry}

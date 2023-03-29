@@ -8,18 +8,35 @@ import {
 import { useSpring, animated } from "@react-spring/three"
 import * as THREE from "three"
 import { Model } from "../Scene"
+import "./App.css"
 
 function App() {
+	const [carColor, setCarColor] = useState("#13c1e8")
+	const [colorInput, setColorInput] = useState(true)
+
+	function handleChange(e) {
+		setCarColor(e.target.value)
+	}
 	return (
-		//position: "relative"
-		<div style={{ height: "100vh", width: "100vw" }}>
+		//
+		<div style={{ height: "100vh", width: "100vw", position: "relative" }}>
+			<input
+				type='color'
+				className='color-input'
+				style={
+					colorInput
+						? { display: "block", position: "absolute" }
+						: { display: "none" }
+				}
+				onChange={handleChange}
+			/>
 			<Canvas>
 				<PerspectiveCamera makeDefault position={[0, 1, 7]} />
 				<OrbitControls autoRotate />
 				<ambientLight position={[0, 0, 5]} intensity={0.1} />
 				{/* <directionalLight color={"green"} position={[0, 0, 5]} /> */}
 				{/* <BoxMesh position={[20, 1, 5]} /> */}
-				<Model position={[0, 0, -2]} />
+				<Model color={carColor} position={[0, 0, -2]} />
 
 				<mesh position={[10, -1.2, 0]} rotation={[Math.PI / -2, 0, 0]}>
 					<planeGeometry args={[200, 200, 75, 75]} />
